@@ -19,11 +19,4 @@
 	<natures>
 		<nature>org.eclipse.php.core.PHPNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/AppBundle/Controller</name>
-			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Users/hatamasa/Desktop/masaya/PHP/symfony2-book-download-20151125/symfony2-book-download/assets/ch06/Controller</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
