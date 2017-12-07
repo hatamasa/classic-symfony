@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use AppBundle\Entity\Inquiry;
+use AppBundle\Entity\Mail;
 
 /**
  * @Route("/inquiry")
@@ -54,7 +55,12 @@ class InquiryController extends Controller
 							)
 					);
 
-			$this->get('mailer')->send($message);
+			// Gmailが送れないためテーブルに保存する
+// 			$this->get('mailer')->send($message);
+			$mail = new Mail();
+			$mail->setMail($message);
+			$em->persist($mail);
+			$em->flush();
 
 			return $this->redirect(
 					$this->generateUrl('app_inquiry_complete'));
