@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class MemberController extends Controller
 {
     /**
+     * DI確認用コントローラー
      * @Route("/member")
      */
     public function indexAction()
