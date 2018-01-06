@@ -48,3 +48,7 @@ swiftmailer:
     delivery_address: masaya19880517@gmail.com
  
 nelmio_api_doc: ~    
+
+hautelook_alice:
+    locale: ja_JP
+    seed: 1
